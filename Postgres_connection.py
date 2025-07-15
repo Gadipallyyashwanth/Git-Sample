@@ -9,7 +9,7 @@ from datetime import datetime
 # Create a connection to the PostgreSQL database
 conn = psycopg2.connect(
     host="localhost",
-    database="Local_db",
+    database="postgres",
     user="postgres",
     password="Techprojects@yash"
 )
@@ -18,7 +18,7 @@ conn = psycopg2.connect(
 cursor = conn.cursor()
 
 # Execute a SQL query
-cursor.execute("SELECT * FROM emp01 order by emp_id ")
+cursor.execute("select * FROM emp01 order by emp_id ")
 
 # Fetch all the rows from the query result
 rows = cursor.fetchall()
